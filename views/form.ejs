@@ -1,0 +1,71 @@
+<%- include('layouts/header'); -%>
+
+<body>
+  <div class="container">
+    <h2>Order Juices</h2>
+    <form name="myform" method="post" onsubmit="return formSubmit();">
+      <div>
+        <label>Name*</label><br>
+        <input id="name" placeholder="Enter your name.." type="text" name="name"><br />
+      </div>
+      <div>
+        <label>Address*</label><br>
+        <input id="address" placeholder="Enter your address.." type="text" name="address"><br />
+      </div>
+      <div>
+        <label>City*</label><br>
+        <input id="city" placeholder="Enter your city.." type="text" name="city"><br />
+      </div>
+      <div>
+        <label>Province*</label><br>
+        <select name="province" id="province">
+          <option value="" aria-readonly="true">Select province</option>
+          <option value="on">Ontario</option>
+          <option value="bc">British Columbia</option>
+          <option value="qbc">Quebec</option>
+        </select><br />
+      </div>
+      <div>
+        <label>Phone*</label><br>
+        <input id="phone" placeholder="XXX-XXX-XXXX" type="text" name="phone"><br />
+      </div>
+      <div>
+        <label>Email*</label><br>
+        <input id="email" placeholder="email@domain.com" type="text" name="email"><br />
+      </div>
+      <div>
+        <label>Mango Juices:</label><br>
+        <input type="text" id="prod1" placeholder="Enter a number" name="prod1"><br>
+      </div>
+      <div>
+        <label>Berry Juices:</label><br>
+        <input type="text" id="prod2" placeholder="Enter a number" name="prod2"><br>
+      </div>
+      <div>
+        <label>Apple Juices:</label><br>
+        <input type="text" id="prod3" placeholder="Enter a number" name="prod3"><br>
+      </div>
+      <br /><br />
+      <input id="submit" type="submit" value="Place Order">
+  </div>
+  <p id="errors"></p>
+  </form>
+  </div>
+  <div class="login">
+    <%
+    if(typeof(errors) != 'undefined')
+    {
+      for(let error of errors)
+      {
+    %>
+    <b>
+      <p id="errors"> <%= error.msg %></p>
+    </b>
+    <%
+      }
+    }
+    %>
+  </div>
+  <div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>

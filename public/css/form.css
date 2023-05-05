@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+}
+body {
+  background-color: #435165;
+}
+/* .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+.container {
+  width: 750px;
+  box-shadow: 0 0 9px 0 #0000004d;
+  margin: 10px auto;
+  border: solid 1px;
+}
+.container h2 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dee0e4;
+}
+.container form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: center;
+  padding-top: 20px;
+}
+.container form input[type="text"],
+select {
+  border: 1px solid #dee0e4;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  padding: 10px;
+  width: 200px;
+}
+.container form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #3274d6;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+.container form input[type="submit"]:hover {
+  background-color: #2868c7;
+  transition: background-color 0.2s;
+}
+.formData {
+  width: 200px;
+  border: 3px solid white;
+  box-shadow: 0 0 10px #2c2c2c;
+  padding: 30px;
+  margin: 50px auto;
+  color: white;
+  background-color: #0781b2;
+  border-radius: 20px;
+}
+.clear {
+  clear: both;
+}
+#errors {
+  color: crimson;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+select option {
+  margin: 3px;
+}
+label {
+  width: 150px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+.container table {
+  border: 2px solid white;
+  border-collapse: collapse;
+  margin: 20px auto;
+  color: white;
+}
+.container td,
+th {
+  border: 2px solid white;
+  padding: 5px 4px;
+}
+.container th {
+  font-weight: bold;
+}
+.inventories h2 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #dee0e4;
+}
+.inventories table {
+  border: 2px solid white;
+  border-collapse: collapse;
+  margin: 10px auto;
+  color: white;
+}
+.inventories td,
+th {
+  border: 2px solid white;
+  padding: 5px 4px;
+}

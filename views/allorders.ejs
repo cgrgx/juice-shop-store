@@ -1,0 +1,47 @@
+<%- include('layouts/header'); -%>
+
+<body>
+  <div class="inventories">
+    <h2>All Orders</h2>
+    <table>
+      <thead>
+        <th>Name:</th>
+        <th>Address:</th>
+        <th>City:</th>
+        <th>Province:</th>
+        <th>Phone:</th>
+        <th>Email:</th>
+        <th>Mango Juices @ $10:</th>
+        <th>Berry Juices @ $20:</th>
+        <th>Apple Juices @ $40:</th>
+        <th>Sub Total:</th>
+        <th>Tax:</th>
+        <th>Total:</th>
+      </thead>
+      <tbody>
+        <% 
+          for(var order of inventories){
+          %>
+
+        <tr>
+          <td><%= order.name %></td>
+          <td><%= order.address %></td>
+          <td><%= order.city %></td>
+          <td><%= order.province %></td>
+          <td><%= order.phone %></td>
+          <td><%= order.email %></td>
+          <td><%= order.prod1 %></td>
+          <td><%= order.prod2 %></td>
+          <td><%= order.prod3 %></td>
+          <td><%= order.subtotal %></td>
+          <td><%= order.tax %></td>
+          <td><%= order.total %></td>
+        </tr>
+        <%
+          }
+          %>
+      </tbody>
+    </table>
+  </div>
+</body>
+<%- include('layouts/footer'); -%>

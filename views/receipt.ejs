@@ -1,0 +1,66 @@
+<%- include('layouts/header'); -%>
+
+<body>
+  <div class="container">
+    <h2>Receipt</h2>
+    <%
+      if(typeof(total) != 'undefined')
+      {
+    %>
+    <table>
+      <tr>
+        <th>Name:</th>
+        <td><%= name %></td>
+      </tr>
+      <tr>
+        <th>Address:</th>
+        <td><%= address %></td>
+      </tr>
+      <tr>
+      <tr>
+        <th>City:</th>
+        <td><%= city %></td>
+      </tr>
+      <th>Province:</th>
+      <td><%= province %></td>
+      </tr>
+      <tr>
+        <th>Phone:</th>
+        <td><%= phone %></td>
+      </tr>
+      <tr>
+      <tr>
+        <th>Email:</th>
+        <td><%= email %></td>
+      </tr>
+      <th><%= prod1n %> Mango Juices @ $10: </th>
+      <td><%= prod1 %></td>
+      </tr>
+      <tr>
+        <th><%= prod2n %> Berry Juices @ $20: </th>
+        <td><%= prod2 %></td>
+      </tr>
+      <tr>
+        <th><%= prod3n %> Apple Juices @ $40: </th>
+        <td><%= prod3 %></td>
+      </tr>
+      <tr>
+        <th>Sub Total:</th>
+        <td>$<%= subtotal.toFixed(2) %></td>
+      </tr>
+      <tr>
+        <th>Taxes:</th>
+        <td>$<%= tax.toFixed(2) %></td>
+      </tr>
+      <tr>
+        <th>Total:</th>
+        <td>$<%= total.toFixed(2) %></td>
+      </tr>
+    </table>
+    <%
+        }
+      %>
+  </div>
+
+</body>
+<%- include('layouts/footer'); -%>
